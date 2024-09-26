@@ -17,7 +17,8 @@
             <button id="menu-toggle" class="md:hidden mr-4">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul id="menu" class="hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
+            <ul id="menu"
+                class="hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
                 <li><a href="#home" class="block py-2 md:py-0 hover:text-sky-500">Home</a></li>
                 <li><a href="#over" class="block py-2 md:py-0 hover:text-sky-500">Over</a></li>
                 <li><a href="#zwembad" class="block py-2 md:py-0 hover:text-sky-500">Zwembad</a></li>
@@ -38,19 +39,30 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="/casabianca" aria-label="English">
-                        <!-- United States Flag SVG -->
-                        <svg viewBox="0 0 640 480">
-                            <rect width="640" height="480" fill="#b22234"/>
-                            <g fill="#fff">
-                                <rect y="36" width="640" height="36"/>
-                                <rect y="108" width="640" height="36"/>
-                                <rect y="180" width="640" height="36"/>
-                                <rect y="252" width="640" height="36"/>
-                                <rect y="324" width="640" height="36"/>
-                                <rect y="396" width="640" height="36"/>
-                            </g>
-                            <rect width="296" height="252" fill="#3c3b6e"/>
-                            <!-- Stars can be added here if desired -->
+                        <!-- UK Flag SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#071b65"></rect>
+                            <path d="M5.101,4h-.101c-1.981,0-3.615,1.444-3.933,3.334L26.899,28h.101c1.981,0,3.615-1.444,3.933-3.334L5.101,4Z"
+                                  fill="#fff"></path>
+                            <path d="M22.25,19h-2.5l9.934,7.947c.387-.353,.704-.777,.929-1.257l-8.363-6.691Z"
+                                  fill="#b92932"></path>
+                            <path d="M1.387,6.309l8.363,6.691h2.5L2.316,5.053c-.387,.353-.704,.777-.929,1.257Z"
+                                  fill="#b92932"></path>
+                            <path d="M5,28h.101L30.933,7.334c-.318-1.891-1.952-3.334-3.933-3.334h-.101L1.067,24.666c.318,1.891,1.952,3.334,3.933,3.334Z"
+                                  fill="#fff"></path>
+                            <rect x="13" y="4" width="6" height="24" fill="#fff"></rect>
+                            <rect x="1" y="13" width="30" height="6" fill="#fff"></rect>
+                            <rect x="14" y="4" width="4" height="24" fill="#b92932"></rect>
+                            <rect x="14" y="1" width="4" height="30" transform="translate(32) rotate(90)"
+                                  fill="#b92932"></rect>
+                            <path d="M28.222,4.21l-9.222,7.376v1.414h.75l9.943-7.94c-.419-.384-.918-.671-1.471-.85Z"
+                                  fill="#b92932"></path>
+                            <path d="M2.328,26.957c.414,.374,.904,.656,1.447,.832l9.225-7.38v-1.408h-.75L2.328,26.957Z"
+                                  fill="#b92932"></path>
+                            <path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z"
+                                  opacity=".15"></path>
+                            <path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z"
+                                  fill="#fff" opacity=".2"></path>
                         </svg>
                         English
                     </a>
@@ -70,7 +82,8 @@
 
 <main>
     <section id="home" class="relative h-screen">
-        <img src="images/Naamloos_HDR17.jpg?height=1080&width=1920" alt="Casonreir" class="absolute inset-0 w-full h-full object-cover">
+        <img src="images/Naamloos_HDR17.jpg?height=1080&width=1920" alt="Casonreir"
+             class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
             <h1 class="text-5xl font-bold mb-4">Welkom bij Casonreir</h1>
             <p class="text-2xl">Een prachtig gastenverblijf in een rustige omgeving</p>
@@ -86,28 +99,53 @@
                 <div class="animate-on-scroll">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Kenmerken</h3>
                     <ul class="grid grid-cols-2 gap-4">
-                        <li class="flex items-center"><i class="fas fa-sun w-5 h-5 mr-2 text-sky-500"></i> Rustige omgeving</li>
-                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> 15 min naar strand</li>
-                        <li class="flex items-center"><i class="fas fa-child w-5 h-5 mr-2 text-sky-500"></i> Kinderspeeltuin</li>
-                        <li class="flex items-center"><i class="fas fa-futbol w-5 h-5 mr-2 text-sky-500"></i> Voetbalveld</li>
-                        <li class="flex items-center"><i class="fas fa-flag w-5 h-5 mr-2 text-sky-500"></i> Minigolf</li>
-                        <li class="flex items-center"><i class="fas fa-table-tennis w-5 h-5 mr-2 text-sky-500"></i> Tafeltennis</li>
-                        <li class="flex items-center"><i class="fas fa-bread-slice w-5 h-5 mr-2 text-sky-500"></i> NL bakker in dorp</li>
-                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i> Supermarkt in dorp</li>
+                        <li class="flex items-center"><i class="fas fa-sun w-5 h-5 mr-2 text-sky-500"></i> Rustige
+                            omgeving
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> 15
+                            min naar strand
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-child w-5 h-5 mr-2 text-sky-500"></i>
+                            Kinderspeeltuin
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-futbol w-5 h-5 mr-2 text-sky-500"></i>
+                            Voetbalveld
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-flag w-5 h-5 mr-2 text-sky-500"></i> Minigolf
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-table-tennis w-5 h-5 mr-2 text-sky-500"></i>
+                            Tafeltennis
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-bread-slice w-5 h-5 mr-2 text-sky-500"></i> NL
+                            bakker in dorp
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
+                            Supermarkt in dorp
+                        </li>
                     </ul>
                     <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Voorzieningen</h3>
                     <ul class="grid grid-cols-2 gap-4">
                         <li class="flex items-center"><i class="fas fa-wifi w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
-                        <li class="flex items-center"><i class="fas fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventilator</li>
-                        <li class="flex items-center"><i class="fas fa-snowflake w-5 h-5 mr-2 text-sky-500"></i> Airco</li>
-                        <li class="flex items-center"><i class="fas fa-bed w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers</li>
-                        <li class="flex items-center"><i class="fas fa-bath w-5 h-5 mr-2 text-sky-500"></i> Badkamer</li>
-                        <li class="flex items-center"><i class="fas fa-utensils w-5 h-5 mr-2 text-sky-500"></i> Uitgeruste keuken</li>
-                        <li class="flex items-center"><i class="fas fa-baby w-5 h-5 mr-2 text-sky-500"></i> Babybed op aanvraag</li>
+                        <li class="flex items-center"><i class="fas fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventilator
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-snowflake w-5 h-5 mr-2 text-sky-500"></i> Airco
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-bed w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-bath w-5 h-5 mr-2 text-sky-500"></i> Badkamer
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-utensils w-5 h-5 mr-2 text-sky-500"></i>
+                            Uitgeruste keuken
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-baby w-5 h-5 mr-2 text-sky-500"></i> Babybed op
+                            aanvraag
+                        </li>
                     </ul>
                 </div>
                 <div class="animate-on-scroll">
-                    <img src="images/Naamloos_HDR8.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightboxNoScroll(this.src)">
+                    <img src="images/Naamloos_HDR8.jpg?height=400&width=600" alt="Interieur"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow"
+                         onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
@@ -118,11 +156,13 @@
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Ons Zwembad</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="images/Naamloos_HDR19.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
+                    <img src="images/Naamloos_HDR19.jpg?height=400&width=600" alt="Zwembad"
+                         class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Geniet van ons verfrissende zwembad</h3>
-                    <p class="mb-4">Ons ruime zwembad is de perfecte plek om te ontspannen en te genieten van de Spaanse zon. Het zwembad wordt gedeeld met de eigenaren en is toegankelijk van 8:00 tot 20:00 uur.</p>
+                    <p class="mb-4">Ons ruime zwembad is de perfecte plek om te ontspannen en te genieten van de Spaanse
+                        zon. Het zwembad wordt gedeeld met de eigenaren en is toegankelijk van 8:00 tot 20:00 uur.</p>
                     <ul class="list-disc list-inside space-y-2">
                         <li>2 ligbedden met kussens inbegrepen</li>
                         <li>Zwarte tuinset bij het zwembad beschikbaar</li>
@@ -143,15 +183,26 @@
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">In de buurt</h3>
                     <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-plane w-5 h-5 mr-2 text-sky-500"></i> 30 min van Alicante luchthaven</li>
-                        <li class="flex items-center"><i class="fas fa-hospital w-5 h-5 mr-2 text-sky-500"></i> Ziekenhuis op 20 min</li>
-                        <li class="flex items-center"><i class="fas fa-city w-5 h-5 mr-2 text-sky-500"></i> Grote steden zoals Elche of Torrevieja op 20-30 minuten</li>
-                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> Stranden van La Marina op 15 min</li>
-                        <li class="flex items-center"><i class="fas fa-shopping-basket w-5 h-5 mr-2 text-sky-500"></i> Vrijdagochtend markt in Dolores</li>
+                        <li class="flex items-center"><i class="fas fa-plane w-5 h-5 mr-2 text-sky-500"></i> 30 min van
+                            Alicante luchthaven
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-hospital w-5 h-5 mr-2 text-sky-500"></i>
+                            Ziekenhuis op 20 min
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-city w-5 h-5 mr-2 text-sky-500"></i> Grote steden
+                            zoals Elche of Torrevieja op 20-30 minuten
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i>
+                            Stranden van La Marina op 15 min
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-shopping-basket w-5 h-5 mr-2 text-sky-500"></i>
+                            Vrijdagochtend markt in Dolores
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <img src="images/Naamloos_HDR16.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
+                    <img src="images/Naamloos_HDR16.jpg?height=400&width=600" alt="Omgeving"
+                         class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
@@ -186,8 +237,11 @@
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Boekingsaanvraag</h3>
-                    <p class="mb-4">Voor een boekingsaanvraag of meer informatie, neem direct contact met ons op via WhatsApp:</p>
-                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20wil%20graag%20informatie%20over%20Casa%20Las%20Palmeras" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                    <p class="mb-4">Voor een boekingsaanvraag of meer informatie, neem direct contact met ons op via
+                        WhatsApp:</p>
+                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20wil%20graag%20informatie%20over%20Casa%20Las%20Palmeras"
+                       target="_blank"
+                       class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                         <i class="fab fa-whatsapp mr-2"></i>
                         Stuur een WhatsApp bericht
                     </a>
@@ -216,14 +270,18 @@
                             Dolores, Alicante, Spanje
                         </li>
                     </ul>
-                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20heb%20een%20vraag%20over%20Casa%20Las%20Palmeras" target="_blank" class="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20heb%20een%20vraag%20over%20Casa%20Las%20Palmeras"
+                       target="_blank"
+                       class="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                         <i class="fab fa-whatsapp mr-2"></i>
                         Stuur een WhatsApp bericht
                     </a>
                 </div>
                 <div>
                     <div id="contact-map" class="w-full rounded-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2ses!4v1727361305820!5m2!1snl!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2ses!4v1727361305820!5m2!1snl!2ses"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -283,8 +341,12 @@
 </div>
 <div id="lightbox" class="lightbox">
     <img src="" alt="Enlarged image">
-    <button id="prev-button" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;</button>
-    <button id="next-button" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;</button>
+    <button id="prev-button"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;
+    </button>
+    <button id="next-button"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;
+    </button>
 </div>
 <script src="index.js"></script>
 </body>
