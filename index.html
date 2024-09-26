@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Las Palmeras</title>
+    <title>Casa de Madera Dolores</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .sticky {
             position: sticky;
             top: 0;
             z-index: 50;
         }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="font-sans bg-sky-50 text-sky-900">
 <header class="sticky bg-white shadow-md">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold text-sky-700">Casa Las Palmeras</div>
+        <div class="text-2xl font-bold text-sky-700">Casa de Madera Dolores</div>
         <ul class="flex space-x-6">
             <li><a href="#home" class="hover:text-sky-500">Home</a></li>
             <li><a href="#over" class="hover:text-sky-500">Over</a></li>
             <li><a href="#zwembad" class="hover:text-sky-500">Zwembad</a></li>
             <li><a href="#omgeving" class="hover:text-sky-500">Omgeving</a></li>
+            <li><a href="#fotos" class="hover:text-sky-500">Foto's</a></li>
             <li><a href="#prijzen" class="hover:text-sky-500">Prijzen</a></li>
             <li><a href="#contact" class="hover:text-sky-500">Contact</a></li>
         </ul>
@@ -31,11 +60,11 @@
 
 <main>
     <section id="home" class="relative h-screen">
-        <img src="./images/Naamloos_HDR27.jpg?height=1080&width=1920" alt="Casa Las Palmeras" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
-            <h1 class="text-5xl font-bold mb-4">Welkom bij Casa Las Palmeras</h1>
+        <img src="./images/Naamloos_HDR27.jpg?height=1080&width=1920" alt="Casa de Madera Dolores" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Welkom bij Casa de Madera Dolores</h1>
             <p class="text-2xl mb-8">Uw rustieke ontspanningsoord in het hart van Dolores, Spanje</p>
-            <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Ontdek Meer</button>
+            <a href="#over" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Ontdek Meer</a>
         </div>
     </section>
 
@@ -46,28 +75,28 @@
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Kenmerken</h3>
                     <ul class="grid grid-cols-2 gap-4">
-                        <li class="flex items-center"><i data-lucide="sun" class="w-5 h-5 mr-2 text-sky-500"></i> Rustige omgeving</li>
-                        <li class="flex items-center"><i data-lucide="umbrella" class="w-5 h-5 mr-2 text-sky-500"></i> 15 min naar strand</li>
-                        <li class="flex items-center"><i data-lucide="child" class="w-5 h-5 mr-2 text-sky-500"></i> Kinderspeeltuin</li>
-                        <li class="flex items-center"><i data-lucide="football" class="w-5 h-5 mr-2 text-sky-500"></i> Voetbalveld</li>
-                        <li class="flex items-center"><i data-lucide="flag" class="w-5 h-5 mr-2 text-sky-500"></i> Minigolf</li>
-                        <li class="flex items-center"><i data-lucide="table" class="w-5 h-5 mr-2 text-sky-500"></i> Tafeltennis</li>
-                        <li class="flex items-center"><i data-lucide="croissant" class="w-5 h-5 mr-2 text-sky-500"></i> NL bakker in dorp</li>
-                        <li class="flex items-center"><i data-lucide="shopping-cart" class="w-5 h-5 mr-2 text-sky-500"></i> Supermarkt in dorp</li>
+                        <li class="flex items-center"><i class="fas fa-sun w-5 h-5 mr-2 text-sky-500"></i> Rustige omgeving</li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> 15 min naar strand</li>
+                        <li class="flex items-center"><i class="fas fa-child w-5 h-5 mr-2 text-sky-500"></i> Kinderspeeltuin</li>
+                        <li class="flex items-center"><i class="fas fa-futbol w-5 h-5 mr-2 text-sky-500"></i> Voetbalveld</li>
+                        <li class="flex items-center"><i class="fas fa-flag w-5 h-5 mr-2 text-sky-500"></i> Minigolf</li>
+                        <li class="flex items-center"><i class="fas fa-table-tennis w-5 h-5 mr-2 text-sky-500"></i> Tafeltennis</li>
+                        <li class="flex items-center"><i class="fas fa-bread-slice w-5 h-5 mr-2 text-sky-500"></i> NL bakker in dorp</li>
+                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i> Supermarkt in dorp</li>
                     </ul>
                     <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Voorzieningen</h3>
                     <ul class="grid grid-cols-2 gap-4">
-                        <li class="flex items-center"><i data-lucide="wifi" class="w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
-                        <li class="flex items-center"><i data-lucide="wind" class="w-5 h-5 mr-2 text-sky-500"></i> Ventilator</li>
-                        <li class="flex items-center"><i data-lucide="snowflake" class="w-5 h-5 mr-2 text-sky-500"></i> Airco</li>
-                        <li class="flex items-center"><i data-lucide="bed" class="w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers</li>
-                        <li class="flex items-center"><i data-lucide="bath" class="w-5 h-5 mr-2 text-sky-500"></i> Badkamer</li>
-                        <li class="flex items-center"><i data-lucide="chef-hat" class="w-5 h-5 mr-2 text-sky-500"></i> Uitgeruste keuken</li>
-                        <li class="flex items-center"><i data-lucide="baby" class="w-5 h-5 mr-2 text-sky-500"></i> Babybed op aanvraag</li>
+                        <li class="flex items-center"><i class="fas fa-wifi w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
+                        <li class="flex items-center"><i class="fas fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventilator</li>
+                        <li class="flex items-center"><i class="fas fa-snowflake w-5 h-5 mr-2 text-sky-500"></i> Airco</li>
+                        <li class="flex items-center"><i class="fas fa-bed w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers</li>
+                        <li class="flex items-center"><i class="fas fa-bath w-5 h-5 mr-2 text-sky-500"></i> Badkamer</li>
+                        <li class="flex items-center"><i class="fas fa-utensils w-5 h-5 mr-2 text-sky-500"></i> Uitgeruste keuken</li>
+                        <li class="flex items-center"><i class="fas fa-baby w-5 h-5 mr-2 text-sky-500"></i> Babybed op aanvraag</li>
                     </ul>
                 </div>
                 <div>
-                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto">
+                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </div>
@@ -78,7 +107,7 @@
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Ons Zwembad</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="./images/Naamloos_HDR29.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto">
+                    <img src="./images/Naamloos_HDR29.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightbox(this.src)">
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Geniet van ons verfrissende zwembad</h3>
@@ -103,21 +132,30 @@
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">In de buurt</h3>
                     <ul class="space-y-2">
-                        <li class="flex items-center"><i data-lucide="plane" class="w-5 h-5 mr-2 text-sky-500"></i> 30 min van Alicante luchthaven</li>
-                        <li class="flex items-center"><i data-lucide="hospital" class="w-5 h-5 mr-2 text-sky-500"></i> Ziekenhuis op 20 min</li>
-                        <li class="flex items-center"><i data-lucide="building" class="w-5 h-5 mr-2 text-sky-500"></i> Grote steden zoals Elche of Torrevieja op 20-30 minuten</li>
-                        <li class="flex items-center"><i data-lucide="umbrella" class="w-5 h-5 mr-2 text-sky-500"></i> Stranden van La Marina op 15 min</li>
-                        <li class="flex items-center"><i data-lucide="shopping-cart" class="w-5 h-5 mr-2 text-sky-500"></i> Vrijdagochtend markt in Dolores</li>
+                        <li class="flex items-center"><i class="fas fa-plane w-5 h-5 mr-2 text-sky-500"></i> 30 min van Alicante luchthaven</li>
+                        <li class="flex items-center"><i class="fas fa-hospital w-5 h-5 mr-2 text-sky-500"></i> Ziekenhuis op 20 min</li>
+                        <li class="flex items-center"><i class="fas fa-city w-5 h-5 mr-2 text-sky-500"></i> Grote steden zoals Elche of Torrevieja op 20-30 minuten</li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> Stranden van La Marina op 15 min</li>
+                        <li class="flex items-center"><i class="fas fa-shopping-basket w-5 h-5 mr-2 text-sky-500"></i> Vrijdagochtend markt in Dolores</li>
                     </ul>
                 </div>
                 <div>
-                    <img src="./images/Naamloos_HDR25.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto">
+                    <img src="./images/Naamloos_HDR25.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="prijzen" class="py-16 bg-sky-100">
+    <section id="fotos" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Foto's</h2>
+            <div class="photo-grid">
+                <!-- Foto's worden hier dynamisch toegevoegd door JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="prijzen" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Prijzen en Beschikbaarheid</h2>
             <div class="grid md:grid-cols-2 gap-8">
@@ -137,51 +175,11 @@
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Boekingsaanvraag</h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Naam" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        <input type="email" placeholder="E-mail" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="date" placeholder="Aankomst" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                            <input type="date" placeholder="Vertrek" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        </div>
-                        <input type="number" placeholder="Aantal personen" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        <textarea placeholder="Opmerkingen of vragen" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
-                        <button type="submit" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Verstuur Aanvraag</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="praktisch" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Praktische Informatie</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Aankomst en Vertrek</h3>
-                    <ul class="space-y-2">
-                        <li>Inchecken: vanaf 15:00 uur (na 21:00 uur graag contact opnemen)</li>
-                        <li>Uitchecken: voor 10:30 uur</li>
-                        <li>Welkomstpakket bij aankomst</li>
-                    </ul>
-                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Huisregels</h3>
-                    <ul class="space-y-2">
-                        <li>Roken in het gastenverblijf niet toegestaan</li>
-                        <li>Gebruik alleen 2-laags toiletpapier in het toilet</li>
-                        <li>Zet ventilatoren uit als u ze niet gebruikt</li>
-                        <li>BBQ na gebruik schoonmaken</li>
-                        <li>Vanaf 22:00 uur rekening houden met de buren</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Voorzieningen</h3>
-                    <ul class="space-y-2">
-                        <li>Dolce Gusto koffiemachine (cups verkrijgbaar bij supermarkten)</li>
-                        <li>Afval kan aan de eigenaren worden gegeven</li>
-                        <li>Parkeren achter het hoofdhuis (behalve bij aankomst/vertrek)</li>
-                        <li>Eén huissleutel en één poortsleutel beschikbaar</li>
-                    </ul>
-                    <p class="mt-4">Voor vragen of hulp kunt u altijd contact opnemen met Bianca: +34688703862</p>
+                    <p class="mb-4">Voor een boekingsaanvraag of meer informatie, neem direct contact met ons op via WhatsApp:</p>
+                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20wil%20graag%20informatie%20over%20Casa%20Las%20Palmeras" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Stuur een WhatsApp bericht
+                    </a>
                 </div>
             </div>
         </div>
@@ -193,33 +191,28 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Neem Contact Op</h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Naam" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        <input type="email" placeholder="E-mail" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        <input type="tel" placeholder="Telefoon" class="w-full px-3 py-2 border border-gray-300 rounded-md">
-                        <textarea placeholder="Uw bericht" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
-                        <button type="submit" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Verstuur</button>
-                    </form>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Contactgegevens</h3>
-                    <ul class="space-y-2">
+                    <ul class="space-y-4">
                         <li class="flex items-center">
-                            <i data-lucide="phone" class="w-5 h-5 mr-2 text-sky-700"></i>
+                            <i class="fas fa-phone w-5 h-5 mr-2 text-sky-700"></i>
                             +34 688 703 862 (Bianca)
                         </li>
                         <li class="flex items-center">
-                            <i data-lucide="mail" class="w-5 h-5 mr-2 text-sky-700"></i>
+                            <i class="fas fa-envelope w-5 h-5 mr-2 text-sky-700"></i>
                             info@casalaspalmeras.es
                         </li>
                         <li class="flex items-center">
-                            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-sky-700"></i>
+                            <i class="fas fa-map-marker-alt w-5 h-5 mr-2 text-sky-700"></i>
                             Dolores, Alicante, Spanje
                         </li>
                     </ul>
-                    <div class="mt-6">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2ses!4v1727361305820!5m2!1snl!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <img src="/placeholder.svg?height=300&width=400" alt="Locatie" class="rounded-lg w-full h-auto">
+                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20heb%20een%20vraag%20over%20Casa%20Las%20Palmeras" target="_blank" class="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Stuur een WhatsApp bericht
+                    </a>
+                </div>
+                <div>
+                    <div id="contact-map" class="w-full rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2ses!4v1727361305820!5m2!1snl!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -231,7 +224,7 @@
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-8">
             <div>
-                <h3 class="text-xl font-semibold mb-4">Casa Las Palmeras</h3>
+                <h3 class="text-xl font-semibold mb-4">Casa de Madera Dolores</h3>
                 <p>Uw rustieke ontspanningsoord in het hart van Dolores, Spanje.</p>
             </div>
             <div>
@@ -241,6 +234,7 @@
                     <li><a href="#over" class="hover:text-sky-300">Over Ons</a></li>
                     <li><a href="#zwembad" class="hover:text-sky-300">Zwembad</a></li>
                     <li><a href="#omgeving" class="hover:text-sky-300">Omgeving</a></li>
+                    <li><a href="#fotos" class="hover:text-sky-300">Foto's</a></li>
                     <li><a href="#prijzen" class="hover:text-sky-300">Prijzen</a></li>
                 </ul>
             </div>
@@ -256,29 +250,112 @@
                 <h3 class="text-xl font-semibold mb-4">Volg Ons</h3>
                 <div class="flex space-x-4">
                     <a href="#" class="text-white hover:text-sky-300">
-                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                        <i class="fab fa-facebook w-6 h-6"></i>
                     </a>
                     <a href="#" class="text-white hover:text-sky-300">
-                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                        <i class="fab fa-instagram w-6 h-6"></i>
                     </a>
                     <a href="#" class="text-white hover:text-sky-300">
-                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                        <i class="fab fa-twitter w-6 h-6"></i>
                     </a>
                 </div>
             </div>
         </div>
         <div class="mt-8 pt-8 border-t border-sky-600 text-center">
-            <p>&copy; <span id="current-year"></span> Casa Las Palmeras. Alle rechten voorbehouden.</p>
+            <p>&copy; <span id="current-year"></span> Casa de Madera Dolores. Alle rechten voorbehouden.</p>
         </div>
     </div>
 </footer>
 
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Enlarged image">
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 <script>
     // Initialize Lucide icons
     lucide.createIcons();
 
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for navigation items
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Lightbox functionality
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const img = lightbox.querySelector('img');
+        img.src = src;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // Load and display photos
+    const photoContainer = document.querySelector('.photo-grid');
+
+    async function loadPhotos() {
+        for (let i = 1; i <= 35; i++) {
+            const imageUrl = `./images/Naamloos_HDR${i}.jpg?width=300&height=200`;
+            const exists = await checkImageExists(imageUrl);
+
+            if (exists) {
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = `Casa de Madera Dolores foto ${i}`;
+                img.className = 'w-full h-full object-cover rounded-lg cursor-pointer';
+                img.onclick = () => openLightbox(img.src.replace('width=300&height=200', 'width=1200&height=800'));
+                photoContainer.appendChild(img);
+            }
+        }
+    }
+
+    function checkImageExists(url) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(true);
+            img.onerror = () => resolve(false);
+            img.src = url;
+        });
+    }
+
+    // Initialize Google Maps
+    function initMap() {
+        const location = { lat: 38.140032, lng: -0.739964 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: location,
+        });
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+        });
+
+        const contactMap = new google.maps.Map(document.getElementById("contact-map"), {
+            zoom: 15,
+            center: location,
+        });
+        const contactMarker = new google.maps.Marker({
+            position: location,
+            map: contactMap,
+        });
+    }
+
+    // Call functions when the page loads
+    window.onload = async function() {
+        await loadPhotos();
+        initMap();
+    };
 </script>
 </body>
 </html>
