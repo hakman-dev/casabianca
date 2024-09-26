@@ -39,6 +39,66 @@
             height: 150px;
             object-fit: cover;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .slide-in-left {
+            animation: slideInFromLeft 0.5s ease-out;
+        }
+
+        .slide-in-right {
+            animation: slideInFromRight 0.5s ease-out;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover animations */
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+
+        /* Menu animation */
+        #menu {
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        #menu.show {
+            max-height: 500px;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="font-sans bg-sky-50 text-sky-900">
@@ -61,7 +121,7 @@
 </header>
 
 <main>
-    <section id="home" class="relative h-screen">
+    <section id="home" class="relative h-screen fade-in">
         <img src="./images/Naamloos_HDR27.jpg?height=1080&width=1920" alt="Casa de Madera Dolores" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
             <h1 class="text-5xl font-bold mb-4">Welkom bij Casa de Madera Dolores</h1>
@@ -72,9 +132,9 @@
 
     <section id="over" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Over Het Huisje</h2>
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700 animate-on-scroll">Over Het Huisje</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
+                <div class="animate-on-scroll">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Kenmerken</h3>
                     <ul class="grid grid-cols-2 gap-4">
                         <li class="flex items-center"><i class="fas fa-sun w-5 h-5 mr-2 text-sky-500"></i> Rustige omgeving</li>
@@ -97,15 +157,15 @@
                         <li class="flex items-center"><i class="fas fa-baby w-5 h-5 mr-2 text-sky-500"></i> Babybed op aanvraag</li>
                     </ul>
                 </div>
-                <div>
-                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightbox(this.src)">
+                <div class="animate-on-scroll">
+                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightbox(this.src)">
                 </div>
             </div>
         </div>
     </section>
 
     <section id="zwembad" class="py-16 bg-sky-100">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 animate-on-scroll">
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Ons Zwembad</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
@@ -128,7 +188,7 @@
     </section>
 
     <section id="omgeving" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 animate-on-scroll">
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">De Omgeving</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -149,8 +209,8 @@
     </section>
 
     <section id="fotos" class="py-16 bg-sky-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Foto's</h2>
+        <div class="container mx-auto px-4 animate-on-scroll">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700 ">Foto's</h2>
             <div class="photo-grid">
                 <!-- Foto's worden hier dynamisch toegevoegd door JavaScript -->
             </div>
@@ -222,7 +282,7 @@
     </section>
 </main>
 
-<footer class="bg-sky-700 text-white py-8">
+<footer class="bg-sky-700 text-white py-8 fade-in">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-8">
             <div>
@@ -390,32 +450,27 @@
         lazyImages.forEach(img => imageObserver.observe(img));
     }
 
-    // Initialize Google Maps
-    function initMap() {
-        const location = { lat: 38.140032, lng: -0.739964 };
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 15,
-            center: location,
-        });
-        const marker = new google.maps.Marker({
-            position: location,
-            map: map,
-        });
 
-        const contactMap = new google.maps.Map(document.getElementById("contact-map"), {
-            zoom: 15,
-            center: location,
-        });
-        const contactMarker = new google.maps.Marker({
-            position: location,
-            map: contactMap,
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach(element => {
+            observer.observe(element);
         });
     }
 
     // Call functions when the page loads
     window.onload = async function() {
         await loadPhotos();
-        initMap();
+        animateOnScroll();
+
     };
 </script>
 </body>
