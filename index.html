@@ -29,6 +29,22 @@
             max-width: 90%;
             max-height: 90%;
         }
+        .lightbox-noscroll {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox-noscroll img {
+            max-width: 90%;
+            max-height: 90%;
+        }
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -87,17 +103,27 @@
             transform: scale(1.05);
         }
 
-        /* Menu animation */
-        #menu {
-            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-        }
 
-        #menu.show {
-            max-height: 500px;
+        /* Custom CSS for animations */
+        .nav-item {
+            transition: color 0.3s;
+        }
+        .nav-item:hover {
+            color: #0ea5e9; /* sky-500 */
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in.visible {
             opacity: 1;
+        }
+        /* Lightbox animation */
+        .lightbox img {
+            transition: transform 0.3s;
+        }
+        .lightbox img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -121,7 +147,7 @@
 </header>
 
 <main>
-    <section id="home" class="relative h-screen fade-in">
+    <section id="home" class="relative h-screen">
         <img src="./images/Naamloos_HDR27.jpg?height=1080&width=1920" alt="Casa de Madera Dolores" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
             <h1 class="text-5xl font-bold mb-4">Welkom bij Casa de Madera Dolores</h1>
@@ -158,7 +184,7 @@
                     </ul>
                 </div>
                 <div class="animate-on-scroll">
-                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightbox(this.src)">
+                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
@@ -169,7 +195,7 @@
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Ons Zwembad</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="./images/Naamloos_HDR29.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightbox(this.src)">
+                    <img src="./images/Naamloos_HDR29.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Geniet van ons verfrissende zwembad</h3>
@@ -202,7 +228,7 @@
                     </ul>
                 </div>
                 <div>
-                    <img src="./images/Naamloos_HDR25.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightbox(this.src)">
+                    <img src="./images/Naamloos_HDR25.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
@@ -282,7 +308,7 @@
     </section>
 </main>
 
-<footer class="bg-sky-700 text-white py-8 fade-in">
+<footer class="bg-sky-700 text-white py-8 ">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-8">
             <div>
@@ -329,149 +355,14 @@
     </div>
 </footer>
 
+<div id="lightbox-noscroll" class="lightbox-noscroll">
+    <img src="" alt="Enlarged image">
+</div>
 <div id="lightbox" class="lightbox">
     <img src="" alt="Enlarged image">
     <button id="prev-button" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;</button>
     <button id="next-button" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;</button>
 </div>
-<script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-
-    // Set current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Smooth scrolling for navigation items
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Responsive menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-
-    // Lightbox functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const prevButton = document.getElementById('prev-button');
-    const nextButton = document.getElementById('next-button');
-    let currentImageIndex = 0;
-    let images = [];
-
-    function openLightbox(src, index) {
-        lightboxImg.src = src;
-        currentImageIndex = index;
-        lightbox.style.display = 'flex';
-    }
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-    }
-
-    function showNextImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        lightboxImg.src = images[currentImageIndex].src.replace('width=300&height=200', 'width=1200&height=800');
-    }
-
-    function showPrevImage() {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        lightboxImg.src = images[currentImageIndex].src.replace('width=300&height=200', 'width=1200&height=800');
-    }
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-
-    prevButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showPrevImage();
-    });
-
-    nextButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showNextImage();
-    });
-
-    // Load and display photos
-    const photoContainer = document.querySelector('.photo-grid');
-
-    async function loadPhotos() {
-        for (let i = 1; i <= 35; i++) {
-            const imageUrl = `./images/Naamloos_HDR${i}.jpg?width=300&height=200`;
-            const exists = await checkImageExists(imageUrl);
-
-            if (exists) {
-                const img = document.createElement('img');
-                img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Placeholder
-                img.setAttribute('data-src', imageUrl);
-                img.alt = `Casa de Madera Dolores foto ${i}`;
-                img.className = 'w-full h-full object-cover rounded-lg cursor-pointer lazy';
-                img.onclick = () => openLightbox(img.src.replace('width=300&height=200', 'width=1200&height=800'), images.length);
-                photoContainer.appendChild(img);
-                images.push(img);
-            }
-        }
-        lazyLoad();
-    }
-
-    function checkImageExists(url) {
-        return new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(true);
-            img.onerror = () => resolve(false);
-            img.src = url;
-        });
-    }
-
-    function lazyLoad() {
-        const lazyImages = document.querySelectorAll('img.lazy');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const image = entry.target;
-                    image.src = image.getAttribute('data-src');
-                    image.classList.remove('lazy');
-                    observer.unobserve(image);
-                }
-            });
-        });
-
-        lazyImages.forEach(img => imageObserver.observe(img));
-    }
-
-
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    }
-
-    // Call functions when the page loads
-    window.onload = async function() {
-        await loadPhotos();
-        animateOnScroll();
-
-    };
-</script>
+<script src="index.js"></script>
 </body>
 </html>
