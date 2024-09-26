@@ -6,7 +6,6 @@
     <title>Casa de Madera Dolores</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .sticky {
@@ -46,14 +45,17 @@
 <header class="sticky bg-white shadow-md">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <div class="text-2xl font-bold text-sky-700">Casa de Madera Dolores</div>
-        <ul class="flex space-x-6">
-            <li><a href="#home" class="hover:text-sky-500">Home</a></li>
-            <li><a href="#over" class="hover:text-sky-500">Over</a></li>
-            <li><a href="#zwembad" class="hover:text-sky-500">Zwembad</a></li>
-            <li><a href="#omgeving" class="hover:text-sky-500">Omgeving</a></li>
-            <li><a href="#fotos" class="hover:text-sky-500">Foto's</a></li>
-            <li><a href="#prijzen" class="hover:text-sky-500">Prijzen</a></li>
-            <li><a href="#contact" class="hover:text-sky-500">Contact</a></li>
+        <button id="menu-toggle" class="md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="menu" class="hidden md:flex md:space-x-6 absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
+            <li><a href="#home" class="block py-2 md:py-0 hover:text-sky-500">Home</a></li>
+            <li><a href="#over" class="block py-2 md:py-0 hover:text-sky-500">Over</a></li>
+            <li><a href="#zwembad" class="block py-2 md:py-0 hover:text-sky-500">Zwembad</a></li>
+            <li><a href="#omgeving" class="block py-2 md:py-0 hover:text-sky-500">Omgeving</a></li>
+            <li><a href="#fotos" class="block py-2 md:py-0 hover:text-sky-500">Foto's</a></li>
+            <li><a href="#prijzen" class="block py-2 md:py-0 hover:text-sky-500">Prijzen</a></li>
+            <li><a href="#contact" class="block py-2 md:py-0 hover:text-sky-500">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -61,7 +63,7 @@
 <main>
     <section id="home" class="relative h-screen">
         <img src="./images/Naamloos_HDR27.jpg?height=1080&width=1920" alt="Casa de Madera Dolores" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white">
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
             <h1 class="text-5xl font-bold mb-4">Welkom bij Casa de Madera Dolores</h1>
             <p class="text-2xl mb-8">Uw rustieke ontspanningsoord in het hart van Dolores, Spanje</p>
             <a href="#over" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Ontdek Meer</a>
@@ -267,10 +269,11 @@
     </div>
 </footer>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+<div id="lightbox" class="lightbox">
     <img src="" alt="Enlarged image">
+    <button id="prev-button" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;</button>
+    <button id="next-button" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;</button>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 <script>
     // Initialize Lucide icons
     lucide.createIcons();
@@ -282,24 +285,63 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
 
+    // Responsive menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
     // Lightbox functionality
-    function openLightbox(src) {
-        const lightbox = document.getElementById('lightbox');
-        const img = lightbox.querySelector('img');
-        img.src = src;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    let currentImageIndex = 0;
+    let images = [];
+
+    function openLightbox(src, index) {
+        lightboxImg.src = src;
+        currentImageIndex = index;
         lightbox.style.display = 'flex';
     }
 
     function closeLightbox() {
-        document.getElementById('lightbox').style.display = 'none';
+        lightbox.style.display = 'none';
     }
+
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        lightboxImg.src = images[currentImageIndex].src.replace('width=300&height=200', 'width=1200&height=800');
+    }
+
+    function showPrevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentImageIndex].src.replace('width=300&height=200', 'width=1200&height=800');
+    }
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    prevButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPrevImage();
+    });
+
+    nextButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNextImage();
+    });
 
     // Load and display photos
     const photoContainer = document.querySelector('.photo-grid');
@@ -311,13 +353,16 @@
 
             if (exists) {
                 const img = document.createElement('img');
-                img.src = imageUrl;
+                img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Placeholder
+                img.setAttribute('data-src', imageUrl);
                 img.alt = `Casa de Madera Dolores foto ${i}`;
-                img.className = 'w-full h-full object-cover rounded-lg cursor-pointer';
-                img.onclick = () => openLightbox(img.src.replace('width=300&height=200', 'width=1200&height=800'));
+                img.className = 'w-full h-full object-cover rounded-lg cursor-pointer lazy';
+                img.onclick = () => openLightbox(img.src.replace('width=300&height=200', 'width=1200&height=800'), images.length);
                 photoContainer.appendChild(img);
+                images.push(img);
             }
         }
+        lazyLoad();
     }
 
     function checkImageExists(url) {
@@ -327,6 +372,22 @@
             img.onerror = () => resolve(false);
             img.src = url;
         });
+    }
+
+    function lazyLoad() {
+        const lazyImages = document.querySelectorAll('img.lazy');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    image.src = image.getAttribute('data-src');
+                    image.classList.remove('lazy');
+                    observer.unobserve(image);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
     }
 
     // Initialize Google Maps
