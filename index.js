@@ -91,7 +91,7 @@ nextButton.addEventListener('click', (e) => {
 const photoContainer = document.querySelector('.photo-grid');
 
 async function loadPhotos() {
-    for (let i = 1; i <= 35; i++) {
+    for (let i = 1; i <= 25; i++) {
         const imageUrl = `./images/Naamloos_HDR${i}.jpg?width=300&height=200`;
         const exists = await checkImageExists(imageUrl);
 
@@ -99,7 +99,7 @@ async function loadPhotos() {
             const img = document.createElement('img');
             img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Placeholder
             img.setAttribute('data-src', imageUrl);
-            img.alt = `Casa de Madera Dolores foto ${i}`;
+            img.alt = `Casonreir foto ${i}`;
             img.className = 'w-full h-full object-cover rounded-lg cursor-pointer lazy';
             img.onclick = () => openLightbox(img.src.replace('width=300&height=200', 'width=1200&height=800'), images.length);
             photoContainer.appendChild(img);

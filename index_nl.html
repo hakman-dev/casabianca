@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casonreir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/index.css">
+
+</head>
+<body class="font-sans bg-sky-50 text-sky-900">
+<header class="sticky bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-sky-700">casonreir</div>
+        <div class="flex items-center">
+            <button id="menu-toggle" class="md:hidden mr-4">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="menu" class="hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
+                <li><a href="#home" class="block py-2 md:py-0 hover:text-sky-500">Home</a></li>
+                <li><a href="#over" class="block py-2 md:py-0 hover:text-sky-500">Over</a></li>
+                <li><a href="#zwembad" class="block py-2 md:py-0 hover:text-sky-500">Zwembad</a></li>
+                <li><a href="#omgeving" class="block py-2 md:py-0 hover:text-sky-500">Omgeving</a></li>
+                <li><a href="#fotos" class="block py-2 md:py-0 hover:text-sky-500">Foto's</a></li>
+                <li><a href="#prijzen" class="block py-2 md:py-0 hover:text-sky-500">Prijzen</a></li>
+                <li><a href="#contact" class="block py-2 md:py-0 hover:text-sky-500">Contact</a></li>
+            </ul>
+            <div class="language-switcher ml-4">
+                <button aria-label="Taal selecteren">
+                    <!-- Current Language Flag SVG (Netherlands) -->
+                    <svg viewBox="0 0 640 480">
+                        <rect width="640" height="160" fill="#ae1c28"/>
+                        <rect y="160" width="640" height="160" fill="#fff"/>
+                        <rect y="320" width="640" height="160" fill="#21468b"/>
+                    </svg>
+                    <i class="fas fa-chevron-down ml-1"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/" aria-label="English">
+                        <!-- United States Flag SVG -->
+                        <svg viewBox="0 0 640 480">
+                            <rect width="640" height="480" fill="#b22234"/>
+                            <g fill="#fff">
+                                <rect y="36" width="640" height="36"/>
+                                <rect y="108" width="640" height="36"/>
+                                <rect y="180" width="640" height="36"/>
+                                <rect y="252" width="640" height="36"/>
+                                <rect y="324" width="640" height="36"/>
+                                <rect y="396" width="640" height="36"/>
+                            </g>
+                            <rect width="296" height="252" fill="#3c3b6e"/>
+                            <!-- Stars can be added here if desired -->
+                        </svg>
+                        English
+                    </a>
+                    <a href="/index_es.html" aria-label="Español">
+                        <!-- Spain Flag SVG -->
+                        <svg viewBox="0 0 640 480">
+                            <rect width="640" height="480" fill="#aa151b"/>
+                            <rect y="160" width="640" height="160" fill="#f1bf00"/>
+                        </svg>
+                        Español
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="relative h-screen">
+        <img src="images/Naamloos_HDR17.jpg?height=1080&width=1920" alt="Casonreir" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
+            <h1 class="text-5xl font-bold mb-4">Welkom bij Casonreir</h1>
+            <p class="text-2xl mb-8">Uw rustieke ontspanningsoord in het hart van Dolores, Spanje</p>
+            <a href="#over" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Ontdek Meer</a>
+        </div>
+    </section>
+
+    <section id="over" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700 animate-on-scroll">Over Het Huisje</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Kenmerken</h3>
+                    <ul class="grid grid-cols-2 gap-4">
+                        <li class="flex items-center"><i class="fas fa-sun w-5 h-5 mr-2 text-sky-500"></i> Rustige omgeving</li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> 15 min naar strand</li>
+                        <li class="flex items-center"><i class="fas fa-child w-5 h-5 mr-2 text-sky-500"></i> Kinderspeeltuin</li>
+                        <li class="flex items-center"><i class="fas fa-futbol w-5 h-5 mr-2 text-sky-500"></i> Voetbalveld</li>
+                        <li class="flex items-center"><i class="fas fa-flag w-5 h-5 mr-2 text-sky-500"></i> Minigolf</li>
+                        <li class="flex items-center"><i class="fas fa-table-tennis w-5 h-5 mr-2 text-sky-500"></i> Tafeltennis</li>
+                        <li class="flex items-center"><i class="fas fa-bread-slice w-5 h-5 mr-2 text-sky-500"></i> NL bakker in dorp</li>
+                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i> Supermarkt in dorp</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Voorzieningen</h3>
+                    <ul class="grid grid-cols-2 gap-4">
+                        <li class="flex items-center"><i class="fas fa-wifi w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
+                        <li class="flex items-center"><i class="fas fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventilator</li>
+                        <li class="flex items-center"><i class="fas fa-snowflake w-5 h-5 mr-2 text-sky-500"></i> Airco</li>
+                        <li class="flex items-center"><i class="fas fa-bed w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers</li>
+                        <li class="flex items-center"><i class="fas fa-bath w-5 h-5 mr-2 text-sky-500"></i> Badkamer</li>
+                        <li class="flex items-center"><i class="fas fa-utensils w-5 h-5 mr-2 text-sky-500"></i> Uitgeruste keuken</li>
+                        <li class="flex items-center"><i class="fas fa-baby w-5 h-5 mr-2 text-sky-500"></i> Babybed op aanvraag</li>
+                    </ul>
+                </div>
+                <div class="animate-on-scroll">
+                    <img src="images/Naamloos_HDR8.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightboxNoScroll(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zwembad" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4 animate-on-scroll">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Ons Zwembad</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="images/Naamloos_HDR19.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Geniet van ons verfrissende zwembad</h3>
+                    <p class="mb-4">Ons ruime zwembad is de perfecte plek om te ontspannen en te genieten van de Spaanse zon. Het zwembad wordt gedeeld met de eigenaren en is toegankelijk van 8:00 tot 20:00 uur.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>2 ligbedden met kussens inbegrepen</li>
+                        <li>Zwarte tuinset bij het zwembad beschikbaar</li>
+                        <li>Kinderen zonder zwemdiploma moeten bandjes of zwemvest dragen</li>
+                        <li>Ouders/verzorgers moeten altijd aanwezig zijn</li>
+                        <li>Maximale diepte ongeveer 1,70 meter (duiken niet toegestaan)</li>
+                        <li>Douchen voor het zwemmen verplicht</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="omgeving" class="py-16 bg-white">
+        <div class="container mx-auto px-4 animate-on-scroll">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">De Omgeving</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">In de buurt</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-plane w-5 h-5 mr-2 text-sky-500"></i> 30 min van Alicante luchthaven</li>
+                        <li class="flex items-center"><i class="fas fa-hospital w-5 h-5 mr-2 text-sky-500"></i> Ziekenhuis op 20 min</li>
+                        <li class="flex items-center"><i class="fas fa-city w-5 h-5 mr-2 text-sky-500"></i> Grote steden zoals Elche of Torrevieja op 20-30 minuten</li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> Stranden van La Marina op 15 min</li>
+                        <li class="flex items-center"><i class="fas fa-shopping-basket w-5 h-5 mr-2 text-sky-500"></i> Vrijdagochtend markt in Dolores</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="images/Naamloos_HDR16.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fotos" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4 animate-on-scroll">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700 ">Foto's</h2>
+            <div class="photo-grid">
+                <!-- Foto's worden hier dynamisch toegevoegd door JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="prijzen" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Prijzen en Beschikbaarheid</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Tarieven</h3>
+                    <ul class="space-y-2">
+                        <li>Laagseizoen (1 nov - 30 apr): €55 per nacht</li>
+                        <li>Voorseizoen (1 mei - 30 jun & 1 sep - 31 okt): €85 per nacht</li>
+                        <li>Hoogseizoen (1 jul - 31 aug): €100 per nacht</li>
+                    </ul>
+                    <p class="mt-4">Minimaal verblijf: 2 nachten</p>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Extra kosten</h3>
+                    <ul class="space-y-2">
+                        <li>Verplicht: €1,50 p.p.p.d. voor beddengoed en handdoeken</li>
+                        <li>Verplicht: €50 eindschoonmaak</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Boekingsaanvraag</h3>
+                    <p class="mb-4">Voor een boekingsaanvraag of meer informatie, neem direct contact met ons op via WhatsApp:</p>
+                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20wil%20graag%20informatie%20over%20Casa%20Las%20Palmeras" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Stuur een WhatsApp bericht
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Contact</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Neem Contact Op</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone w-5 h-5 mr-2 text-sky-700"></i>
+                            +34 688 703 862 (Bianca)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope w-5 h-5 mr-2 text-sky-700"></i>
+                            info@casonreir.es
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt w-5 h-5 mr-2 text-sky-700"></i>
+                            Dolores, Alicante, Spanje
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/34688703862?text=Hallo,%20ik%20heb%20een%20vraag%20over%20Casa%20Las%20Palmeras" target="_blank" class="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Stuur een WhatsApp bericht
+                    </a>
+                </div>
+                <div>
+                    <div id="contact-map" class="w-full rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2ses!4v1727361305820!5m2!1snl!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-sky-700 text-white py-8 ">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Casonreir</h3>
+                <p>Uw rustieke ontspanningsoord in het hart van Dolores, Spanje.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Snelle Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-sky-300">Home</a></li>
+                    <li><a href="#over" class="hover:text-sky-300">Over Ons</a></li>
+                    <li><a href="#zwembad" class="hover:text-sky-300">Zwembad</a></li>
+                    <li><a href="#omgeving" class="hover:text-sky-300">Omgeving</a></li>
+                    <li><a href="#fotos" class="hover:text-sky-300">Foto's</a></li>
+                    <li><a href="#prijzen" class="hover:text-sky-300">Prijzen</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li>+34 688 703 862 (Bianca)</li>
+                    <li>info@casonreir.es</li>
+                    <li>Dolores, Alicante, Spanje</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Volg Ons</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-sky-300">
+                        <i class="fab fa-facebook w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-sky-300">
+                        <i class="fab fa-instagram w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-sky-300">
+                        <i class="fab fa-twitter w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-sky-600 text-center">
+            <p>&copy; <span id="current-year"></span> Casonreir. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+
+<div id="lightbox-noscroll" class="lightbox-noscroll">
+    <img src="" alt="Enlarged image">
+</div>
+<div id="lightbox" class="lightbox">
+    <img src="" alt="Enlarged image">
+    <button id="prev-button" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;</button>
+    <button id="next-button" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;</button>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
