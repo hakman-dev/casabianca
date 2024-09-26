@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Las Palmeras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="font-sans bg-sky-50 text-sky-900">
+<header class="sticky bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-sky-700">Casa Las Palmeras</div>
+        <ul class="flex space-x-6">
+            <li><a href="#home" class="hover:text-sky-500">Home</a></li>
+            <li><a href="#over" class="hover:text-sky-500">Over</a></li>
+            <li><a href="#zwembad" class="hover:text-sky-500">Zwembad</a></li>
+            <li><a href="#omgeving" class="hover:text-sky-500">Omgeving</a></li>
+            <li><a href="#prijzen" class="hover:text-sky-500">Prijzen</a></li>
+            <li><a href="#contact" class="hover:text-sky-500">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="relative h-screen">
+        <img src="./images/Naamloos_HDR27.jpg?height=1080&width=1920" alt="Casa Las Palmeras" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Welkom bij Casa Las Palmeras</h1>
+            <p class="text-2xl mb-8">Uw rustieke ontspanningsoord in het hart van Dolores, Spanje</p>
+            <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Ontdek Meer</button>
+        </div>
+    </section>
+
+    <section id="over" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Over Het Huisje</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Kenmerken</h3>
+                    <ul class="grid grid-cols-2 gap-4">
+                        <li class="flex items-center"><i data-lucide="sun" class="w-5 h-5 mr-2 text-sky-500"></i> Rustige omgeving</li>
+                        <li class="flex items-center"><i data-lucide="umbrella" class="w-5 h-5 mr-2 text-sky-500"></i> 15 min naar strand</li>
+                        <li class="flex items-center"><i data-lucide="child" class="w-5 h-5 mr-2 text-sky-500"></i> Kinderspeeltuin</li>
+                        <li class="flex items-center"><i data-lucide="football" class="w-5 h-5 mr-2 text-sky-500"></i> Voetbalveld</li>
+                        <li class="flex items-center"><i data-lucide="flag" class="w-5 h-5 mr-2 text-sky-500"></i> Minigolf</li>
+                        <li class="flex items-center"><i data-lucide="table" class="w-5 h-5 mr-2 text-sky-500"></i> Tafeltennis</li>
+                        <li class="flex items-center"><i data-lucide="croissant" class="w-5 h-5 mr-2 text-sky-500"></i> NL bakker in dorp</li>
+                        <li class="flex items-center"><i data-lucide="shopping-cart" class="w-5 h-5 mr-2 text-sky-500"></i> Supermarkt in dorp</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Voorzieningen</h3>
+                    <ul class="grid grid-cols-2 gap-4">
+                        <li class="flex items-center"><i data-lucide="wifi" class="w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
+                        <li class="flex items-center"><i data-lucide="wind" class="w-5 h-5 mr-2 text-sky-500"></i> Ventilator</li>
+                        <li class="flex items-center"><i data-lucide="snowflake" class="w-5 h-5 mr-2 text-sky-500"></i> Airco</li>
+                        <li class="flex items-center"><i data-lucide="bed" class="w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers</li>
+                        <li class="flex items-center"><i data-lucide="bath" class="w-5 h-5 mr-2 text-sky-500"></i> Badkamer</li>
+                        <li class="flex items-center"><i data-lucide="chef-hat" class="w-5 h-5 mr-2 text-sky-500"></i> Uitgeruste keuken</li>
+                        <li class="flex items-center"><i data-lucide="baby" class="w-5 h-5 mr-2 text-sky-500"></i> Babybed op aanvraag</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./images/Naamloos_HDR24.jpg?height=400&width=600" alt="Interieur" class="rounded-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zwembad" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Ons Zwembad</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="./images/Naamloos_HDR29.jpg?height=400&width=600" alt="Zwembad" class="rounded-lg w-full h-auto">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Geniet van ons verfrissende zwembad</h3>
+                    <p class="mb-4">Ons ruime zwembad is de perfecte plek om te ontspannen en te genieten van de Spaanse zon. Het zwembad wordt gedeeld met de eigenaren en is toegankelijk van 8:00 tot 20:00 uur.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>2 ligbedden met kussens inbegrepen</li>
+                        <li>Zwarte tuinset bij het zwembad beschikbaar</li>
+                        <li>Kinderen zonder zwemdiploma moeten bandjes of zwemvest dragen</li>
+                        <li>Ouders/verzorgers moeten altijd aanwezig zijn</li>
+                        <li>Maximale diepte ongeveer 1,70 meter (duiken niet toegestaan)</li>
+                        <li>Douchen voor het zwemmen verplicht</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="omgeving" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">De Omgeving</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">In de buurt</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i data-lucide="plane" class="w-5 h-5 mr-2 text-sky-500"></i> 30 min van Alicante luchthaven</li>
+                        <li class="flex items-center"><i data-lucide="hospital" class="w-5 h-5 mr-2 text-sky-500"></i> Ziekenhuis op 20 min</li>
+                        <li class="flex items-center"><i data-lucide="building" class="w-5 h-5 mr-2 text-sky-500"></i> Grote steden zoals Elche of Torrevieja op 20-30 minuten</li>
+                        <li class="flex items-center"><i data-lucide="umbrella" class="w-5 h-5 mr-2 text-sky-500"></i> Stranden van La Marina op 15 min</li>
+                        <li class="flex items-center"><i data-lucide="shopping-cart" class="w-5 h-5 mr-2 text-sky-500"></i> Vrijdagochtend markt in Dolores</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./images/Naamloos_HDR25.jpg?height=400&width=600" alt="Omgeving" class="rounded-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prijzen" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Prijzen en Beschikbaarheid</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Tarieven</h3>
+                    <ul class="space-y-2">
+                        <li>Laagseizoen (1 nov - 30 apr): €55 per nacht</li>
+                        <li>Voorseizoen (1 mei - 30 jun & 1 sep - 31 okt): €85 per nacht</li>
+                        <li>Hoogseizoen (1 jul - 31 aug): €100 per nacht</li>
+                    </ul>
+                    <p class="mt-4">Minimaal verblijf: 2 nachten</p>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Extra kosten</h3>
+                    <ul class="space-y-2">
+                        <li>Verplicht: €1,50 p.p.p.d. voor beddengoed en handdoeken</li>
+                        <li>Verplicht: €50 eindschoonmaak</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Boekingsaanvraag</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Naam" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <input type="email" placeholder="E-mail" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="date" placeholder="Aankomst" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            <input type="date" placeholder="Vertrek" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        </div>
+                        <input type="number" placeholder="Aantal personen" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <textarea placeholder="Opmerkingen of vragen" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+                        <button type="submit" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Verstuur Aanvraag</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="praktisch" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Praktische Informatie</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Aankomst en Vertrek</h3>
+                    <ul class="space-y-2">
+                        <li>Inchecken: vanaf 15:00 uur (na 21:00 uur graag contact opnemen)</li>
+                        <li>Uitchecken: voor 10:30 uur</li>
+                        <li>Welkomstpakket bij aankomst</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Huisregels</h3>
+                    <ul class="space-y-2">
+                        <li>Roken in het gastenverblijf niet toegestaan</li>
+                        <li>Gebruik alleen 2-laags toiletpapier in het toilet</li>
+                        <li>Zet ventilatoren uit als u ze niet gebruikt</li>
+                        <li>BBQ na gebruik schoonmaken</li>
+                        <li>Vanaf 22:00 uur rekening houden met de buren</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Voorzieningen</h3>
+                    <ul class="space-y-2">
+                        <li>Dolce Gusto koffiemachine (cups verkrijgbaar bij supermarkten)</li>
+                        <li>Afval kan aan de eigenaren worden gegeven</li>
+                        <li>Parkeren achter het hoofdhuis (behalve bij aankomst/vertrek)</li>
+                        <li>Eén huissleutel en één poortsleutel beschikbaar</li>
+                    </ul>
+                    <p class="mt-4">Voor vragen of hulp kunt u altijd contact opnemen met Bianca: +34688703862</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-sky-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Contact</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Neem Contact Op</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Naam" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <input type="email" placeholder="E-mail" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <input type="tel" placeholder="Telefoon" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <textarea placeholder="Uw bericht" class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+                        <button type="submit" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Verstuur</button>
+                    </form>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Contactgegevens</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2 text-sky-700"></i>
+                            +34 688 703 862 (Bianca)
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2 text-sky-700"></i>
+                            info@casalaspalmeras.es
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-sky-700"></i>
+                            Dolores, Alicante, Spanje
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1snl!2ses!4v1727361305820!5m2!1snl!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <img src="/placeholder.svg?height=300&width=400" alt="Locatie" class="rounded-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-sky-700 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Casa Las Palmeras</h3>
+                <p>Uw rustieke ontspanningsoord in het hart van Dolores, Spanje.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Snelle Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-sky-300">Home</a></li>
+                    <li><a href="#over" class="hover:text-sky-300">Over Ons</a></li>
+                    <li><a href="#zwembad" class="hover:text-sky-300">Zwembad</a></li>
+                    <li><a href="#omgeving" class="hover:text-sky-300">Omgeving</a></li>
+                    <li><a href="#prijzen" class="hover:text-sky-300">Prijzen</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li>+34 688 703 862 (Bianca)</li>
+                    <li>info@casalaspalmeras.es</li>
+                    <li>Dolores, Alicante, Spanje</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Volg Ons</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-sky-300">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-sky-300">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-sky-300">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-sky-600 text-center">
+            <p>&copy; <span id="current-year"></span> Casa Las Palmeras. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
