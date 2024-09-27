@@ -99,7 +99,7 @@ async function loadPhotos() {
             const img = document.createElement('img');
             img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Placeholder
             img.setAttribute('data-src', imageUrl);
-            img.alt = `Casonreir foto ${i}`;
+            img.alt = `Casa Encanto foto ${i}`;
             img.className = 'w-full h-full object-cover rounded-lg cursor-pointer lazy';
             img.onclick = () => openLightbox(img.src.replace('width=300&height=200', 'width=1200&height=800'), images.length);
             photoContainer.appendChild(img);

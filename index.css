@@ -1,3 +1,9 @@
+body {
+    font-family: 'Italiana', serif !important;
+    font-weight: 700 !important;
+
+}
+
 .sticky {
     position: sticky;
     top: 0;
