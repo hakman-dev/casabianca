@@ -125,7 +125,6 @@ function lazyLoad() {
             if (entry.isIntersecting) {
                 const image = entry.target;
                 image.src = image.getAttribute('data-src');
-                image.classList.remove('lazy');
                 observer.unobserve(image);
             }
         });
