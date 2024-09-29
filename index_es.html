@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Encanto</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+    <title>Casa Encanto Dolores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="font-sans bg-sky-50 text-sky-900">
 <header class="sticky bg-white shadow-md">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold text-sky-700">Casa Encanto</div>
+        <h2 class="text-2xl font-bold text-sky-700">Casa Encanto Dolores</h2>
         <div class="flex items-center">
             <button id="menu-toggle" class="md:hidden mr-4">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul id="menu" class="hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
+            <ul id="menu"
+                class="hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
                 <li><a href="#home" class="block py-2 md:py-0 hover:text-sky-500">Inicio</a></li>
-                <li><a href="#about" class="block py-2 md:py-0 hover:text-sky-500">Acerca de</a></li>
+                <li><a href="#about" class="block py-2 md:py-0 hover:text-sky-500">Sobre Nosotros</a></li>
                 <li><a href="#pool" class="block py-2 md:py-0 hover:text-sky-500">Piscina</a></li>
                 <li><a href="#surroundings" class="block py-2 md:py-0 hover:text-sky-500">Alrededores</a></li>
                 <li><a href="#photos" class="block py-2 md:py-0 hover:text-sky-500">Fotos</a></li>
@@ -37,24 +36,34 @@
                     <i class="fas fa-chevron-down ml-1"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="/casabianca" aria-label="English">
-                        <!-- United States Flag SVG -->
-                        <svg viewBox="0 0 640 480">
-                            <rect width="640" height="480" fill="#b22234"/>
-                            <g fill="#fff">
-                                <rect y="36" width="640" height="36"/>
-                                <rect y="108" width="640" height="36"/>
-                                <rect y="180" width="640" height="36"/>
-                                <rect y="252" width="640" height="36"/>
-                                <rect y="324" width="640" height="36"/>
-                                <rect y="396" width="640" height="36"/>
-                            </g>
-                            <rect width="296" height="252" fill="#3c3b6e"/>
-                            <!-- Stars can be added here if desired -->
+                    <a href="/" aria-label="English">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#071b65"></rect>
+                            <path d="M5.101,4h-.101c-1.981,0-3.615,1.444-3.933,3.334L26.899,28h.101c1.981,0,3.615-1.444,3.933-3.334L5.101,4Z"
+                                  fill="#fff"></path>
+                            <path d="M22.25,19h-2.5l9.934,7.947c.387-.353,.704-.777,.929-1.257l-8.363-6.691Z"
+                                  fill="#b92932"></path>
+                            <path d="M1.387,6.309l8.363,6.691h2.5L2.316,5.053c-.387,.353-.704,.777-.929,1.257Z"
+                                  fill="#b92932"></path>
+                            <path d="M5,28h.101L30.933,7.334c-.318-1.891-1.952-3.334-3.933-3.334h-.101L1.067,24.666c.318,1.891,1.952,3.334,3.933,3.334Z"
+                                  fill="#fff"></path>
+                            <rect x="13" y="4" width="6" height="24" fill="#fff"></rect>
+                            <rect x="1" y="13" width="30" height="6" fill="#fff"></rect>
+                            <rect x="14" y="4" width="4" height="24" fill="#b92932"></rect>
+                            <rect x="14" y="1" width="4" height="30" transform="translate(32) rotate(90)"
+                                  fill="#b92932"></rect>
+                            <path d="M28.222,4.21l-9.222,7.376v1.414h.75l9.943-7.94c-.419-.384-.918-.671-1.471-.85Z"
+                                  fill="#b92932"></path>
+                            <path d="M2.328,26.957c.414,.374,.904,.656,1.447,.832l9.225-7.38v-1.408h-.75L2.328,26.957Z"
+                                  fill="#b92932"></path>
+                            <path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z"
+                                  opacity=".15"></path>
+                            <path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z"
+                                  fill="#fff" opacity=".2"></path>
                         </svg>
                         English
                     </a>
-                    <a href="/casabianca/index_nl.html" aria-label="Nederlands">
+                    <a href="index_nl.html" aria-label="Nederlands">
                         <!-- Netherlands Flag SVG -->
                         <svg viewBox="0 0 640 480">
                             <rect width="640" height="160" fill="#ae1c28"/>
@@ -71,10 +80,12 @@
 
 <main>
     <section id="home" class="relative h-screen">
-        <img src="images/Naamloos_HDR18.jpg?height=1080&width=1920" alt="Casa Encanto" class="absolute inset-0 w-full h-full object-cover">
+        <img src="images/Naamloos_HDR18.jpg?height=1080&width=1920" alt="Casa Encanto Dolores"
+             class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
-            <h1 class="text-5xl font-bold mb-4">Bienvenido a Casa Encanto</h1>
-            <p class="text-2xl mb-8">Tu refugio rústico en el corazón de Dolores, España</p>
+            <h1 class="text-5xl font-bold mb-4">Bienvenido a Casa Encanto Dolores</h1>
+            <p class="text-2xl">Una hermosa casa de huéspedes en un entorno tranquilo</p>
+            <p class="text-xl mb-8">A 3 minutos en coche de la animada plaza de Dolores</p>
             <a href="#about" class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded">Descubre Más</a>
         </div>
     </section>
@@ -91,23 +102,35 @@
                         <li class="flex items-center"><i class="fas fa-child w-5 h-5 mr-2 text-sky-500"></i> Parque infantil</li>
                         <li class="flex items-center"><i class="fas fa-futbol w-5 h-5 mr-2 text-sky-500"></i> Campo de fútbol</li>
                         <li class="flex items-center"><i class="fas fa-flag w-5 h-5 mr-2 text-sky-500"></i> Minigolf</li>
-                        <li class="flex items-center"><i class="fas fa-table-tennis w-5 h-5 mr-2 text-sky-500"></i> Tenis de mesa</li>
+                        <li class="flex items-center"><i class="fas fa-table-tennis w-5 h-5 mr-2 text-sky-500"></i> Ping-pong</li>
                         <li class="flex items-center"><i class="fas fa-bread-slice w-5 h-5 mr-2 text-sky-500"></i> Panadería holandesa en el pueblo</li>
                         <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i> Supermercado en el pueblo</li>
+                        <li class="flex items-center"><i class="fa-solid fa-location-dot w-5 h-5 mr-2 text-sky-500"></i>
+                            <span>74 m<sup>2</sup> en una parcela de 7000 m<sup>2</sup></span>
+                        </li>
+                        <li class="flex items-center"><i class="fa-solid fa-couch w-5 h-5 mr-2 text-sky-500"></i>
+                            <span>Amplia terraza con zona de estar cómoda</span>
+                        </li>
                     </ul>
-                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Servicios</h3>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Comodidades</h3>
                     <ul class="grid grid-cols-2 gap-4">
                         <li class="flex items-center"><i class="fas fa-wifi w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
                         <li class="flex items-center"><i class="fas fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventilador</li>
-                        <li class="flex items-center"><i class="fas fa-snowflake w-5 h-5 mr-2 text-sky-500"></i> Aire acondicionado</li>
                         <li class="flex items-center"><i class="fas fa-bed w-5 h-5 mr-2 text-sky-500"></i> 2 dormitorios</li>
                         <li class="flex items-center"><i class="fas fa-bath w-5 h-5 mr-2 text-sky-500"></i> Baño</li>
                         <li class="flex items-center"><i class="fas fa-utensils w-5 h-5 mr-2 text-sky-500"></i> Cocina equipada</li>
                         <li class="flex items-center"><i class="fas fa-baby w-5 h-5 mr-2 text-sky-500"></i> Cuna bajo petición</li>
+                        <li class="flex items-center"><i class="fa-solid fa-snowflake w-5 h-5 mr-2 text-sky-500"></i> Aire acondicionado para refrigeración y calefacción (en el salón)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-hamburger w-5 h-5 mr-2 text-sky-500"></i> Barbacoa</li>
+                        <li class="flex items-center"><i class="fa-solid fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventiladores de techo en los dormitorios</li>
+                        <li class="flex items-center"><i class="fa-solid fa-users w-5 h-5 mr-2 text-sky-500"></i> Capacidad máxima: 5 personas</li>
+                        <li class="flex items-center"><i class="fa-solid fa-car w-5 h-5 mr-2 text-sky-500"></i> Aparcamiento en el recinto</li>
                     </ul>
                 </div>
                 <div class="animate-on-scroll">
-                    <img src="images/Naamloos_HDR8.jpg?height=400&width=600" alt="Interior" class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightboxNoScroll(this.src)">
+                    <img src="images/Naamloos_HDR8.jpg?height=400&width=600" alt="Interior"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow"
+                         onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
@@ -118,18 +141,19 @@
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Nuestra Piscina</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="images/Naamloos_HDR20.jpg?height=400&width=600" alt="Piscina" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
+                    <img src="images/Naamloos_HDR20.jpg?height=400&width=600" alt="Piscina"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightboxNoScroll(this.src)">
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Disfruta de nuestra refrescante piscina</h3>
-                    <p class="mb-4">Nuestra amplia piscina es el lugar perfecto para relajarse y disfrutar del sol español. La piscina se comparte con los propietarios y es accesible de 8:00 a 20:00 horas.</p>
+                    <p class="mb-4">Nuestra amplia piscina es el lugar perfecto para relajarse y disfrutar del sol español. La piscina se comparte con los propietarios y está accesible de 8:00 a 20:00 horas.</p>
                     <ul class="list-disc list-inside space-y-2">
-                        <li>2 tumbonas con cojines incluidas</li>
-                        <li>Conjunto de jardín negro disponible en la piscina</li>
-                        <li>Niños sin certificado de natación deben usar manguitos o chaleco salvavidas</li>
-                        <li>Padres/tutores deben estar siempre presentes</li>
-                        <li>Profundidad máxima aproximadamente 1,70 metros (buceo no permitido)</li>
-                        <li>Ducha obligatoria antes de nadar</li>
+                        <li>2 tumbonas con cojines incluidos</li>
+                        <li>Juego de jardín negro disponible junto a la piscina</li>
+                        <li>Los niños sin certificado de natación deben llevar manguitos o chaleco salvavidas</li>
+                        <li>Los padres/tutores deben estar siempre presentes</li>
+                        <li>Profundidad máxima aproximada de 1,70 metros (no se permite bucear)</li>
+                        <li>Es obligatorio ducharse antes de nadar</li>
                     </ul>
                 </div>
             </div>
@@ -141,17 +165,46 @@
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Los Alrededores</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">En la Zona</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Cerca</h3>
                     <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-plane w-5 h-5 mr-2 text-sky-500"></i> A 30 min del aeropuerto de Alicante</li>
-                        <li class="flex items-center"><i class="fas fa-hospital w-5 h-5 mr-2 text-sky-500"></i> Hospital a 20 min</li>
-                        <li class="flex items-center"><i class="fas fa-city w-5 h-5 mr-2 text-sky-500"></i> Grandes ciudades como Elche o Torrevieja a 20-30 minutos</li>
-                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> Playas de La Marina a 15 min</li>
-                        <li class="flex items-center"><i class="fas fa-shopping-basket w-5 h-5 mr-2 text-sky-500"></i> Mercado de los viernes por la mañana en Dolores</li>
+                        <li class="flex items-center"><i class="fas fa-tree w-5 h-5 mr-2 text-sky-500"></i>
+                            Parque Natural El Fondo a 9,5 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-leaf w-5 h-5 mr-2 text-sky-500"></i>
+                            Jardín de Palmeras: El Palmeral a 20 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i>
+                            Playas de La Marina a 11 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-paw w-5 h-5 mr-2 text-sky-500"></i>
+                            Zoológico Rio Safari Elche a 21 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i>
+                            Playas de Santa Pola a 22 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
+                            Centro Comercial L'Aljub Elche a 20 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
+                            Centro Comercial La Zenia Boulevard a 32 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-store w-5 h-5 mr-2 text-sky-500"></i>
+                            Mercado de los sábados en La Marina
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
+                            Aquapark Rojales a 12 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
+                            Aquopolis Torrevieja a 26 km
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
+                            Aquapark Flamingo a 20 km
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <img src="images/Naamloos_HDR17.jpg?height=400&width=600" alt="Alrededores" class="rounded-lg w-full h-auto cursor-pointer" onclick="openLightboxNoScroll(this.src)">
+                    <img src="images/Naamloos_HDR17.jpg?height=400&width=600" alt="Alrededores"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow" onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
@@ -173,21 +226,24 @@
                 <div>
                     <h3 class="text-2xl font-semibold mb-4 text-sky-600">Tarifas</h3>
                     <ul class="space-y-2">
-                        <li>Temporada baja (1 nov - 30 abr): 55€ por noche</li>
-                        <li>Pretemporada (1 may - 30 jun & 1 sep - 31 oct): 85€ por noche</li>
-                        <li>Temporada alta (1 jul - 31 ago): 100€ por noche</li>
+                        <li>Temporada baja (1 nov - 30 abr): €55 por noche</li>
+                        <li>Temporada media (1 may - 30 jun & 1 sep - 31 oct): €85 por noche</li>
+                        <li>Temporada alta (1 jul - 31 ago): €100 por noche</li>
                     </ul>
-                    <p class="mt-4">Estancia mínima: 2 noches</p>
-                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Costes Extra</h3>
+                    <p class="mt-4">Estancia mínima: 2 noches, en temporada alta mínimo 7 noches
+                    </p>
+                    <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Costes adicionales</h3>
                     <ul class="space-y-2">
-                        <li>Obligatorio: 1,50€ por persona por día por ropa de cama y toallas</li>
-                        <li>Obligatorio: 50€ limpieza final</li>
+                        <li>Obligatorio: €1,50 por persona y noche para ropa de cama y toallas</li>
+                        <li>Obligatorio: €50 limpieza final</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Solicitud de Reserva</h3>
-                    <p class="mb-4">Para una solicitud de reserva o más información, contáctanos directamente vía WhatsApp:</p>
-                    <a href="https://wa.me/34688703862?text=Hola,%20me%20gustaría%20información%20sobre%20Casa%20Las%20Palmeras" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Solicitud de reserva</h3>
+                    <p class="mb-4">Para una solicitud de reserva o más información, contáctenos directamente a través de WhatsApp:</p>
+                    <a href="https://wa.me/34688703862?text=Hola,%20tengo%20una%20pregunta%20sobre%20Casa%20Encanto%20Dolores"
+                       target="_blank"
+                       class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                         <i class="fab fa-whatsapp mr-2"></i>
                         Enviar un mensaje de WhatsApp
                     </a>
@@ -199,31 +255,33 @@
     <section id="contact" class="py-16 bg-sky-100">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">Contacto</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Ponte en Contacto</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">Póngase en contacto</h3>
                     <ul class="space-y-4">
                         <li class="flex items-center">
                             <i class="fas fa-phone w-5 h-5 mr-2 text-sky-700"></i>
-                            +34 688 703 862 (Bianca)
+                            <span>+34 688 703 862 (Bianca)</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope w-5 h-5 mr-2 text-sky-700"></i>
-                            info@Casa Encanto.es
+                            <span>info@CasaEncantoDolores.es</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt w-5 h-5 mr-2 text-sky-700"></i>
-                            Dolores, Alicante, España
+                            <span>Dolores, Alicante, España</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/34688703862?text=Hola,%20tengo%20una%20pregunta%20sobre%20Casa%20Las%20Palmeras" target="_blank" class="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                    <a href="https://wa.me/34688703862?text=Hola,%20tengo%20una%20pregunta%20sobre%20Casa%20Encanto%20Dolores"
+                       target="_blank"
+                       class="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                         <i class="fab fa-whatsapp mr-2"></i>
                         Enviar un mensaje de WhatsApp
                     </a>
                 </div>
-                <div>
-                    <div id="contact-map" class="w-full rounded-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d978.5841829213018!2d-0.7399637840987706!3d38.14003254421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1727361305820!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="flex items-center justify-center h-full">
+                    <div id="contact-map" class="w-full h-full rounded-lg overflow-hidden">
+                        <img src="images/dolores-espana-map.png" alt="Imagen del mapa" class="object-cover" style="max-height: 300px">
                     </div>
                 </div>
             </div>
@@ -235,11 +293,11 @@
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-8">
             <div>
-                <h3 class="text-xl font-semibold mb-4">Casa Encanto</h3>
-                <p>Tu refugio rústico en el corazón de Dolores, España.</p>
+                <h3 class="text-xl font-semibold mb-4">Casa Encanto Dolores</h3>
+                <p>Una hermosa casa de huéspedes en un entorno tranquilo</p>
             </div>
             <div>
-                <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+                <h3 class="text-xl font-semibold mb-4">Enlaces rápidos</h3>
                 <ul class="space-y-2">
                     <li><a href="#home" class="hover:text-sky-300">Inicio</a></li>
                     <li><a href="#about" class="hover:text-sky-300">Sobre Nosotros</a></li>
@@ -253,27 +311,21 @@
                 <h3 class="text-xl font-semibold mb-4">Contacto</h3>
                 <ul class="space-y-2">
                     <li>+34 688 703 862 (Bianca)</li>
-                    <li>info@Casa Encanto.es</li>
+                    <li>info@CasaEncantoDolores.es</li>
                     <li>Dolores, Alicante, España</li>
                 </ul>
             </div>
             <div>
                 <h3 class="text-xl font-semibold mb-4">Síguenos</h3>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-white hover:text-sky-300">
-                        <i class="fab fa-facebook w-6 h-6"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-sky-300">
+                    <a href="https://www.instagram.com/bij.ons.in.spanje/" class="text-white hover:text-sky-300">
                         <i class="fab fa-instagram w-6 h-6"></i>
-                    </a>
-                    <a href="#" class="text-white hover:text-sky-300">
-                        <i class="fab fa-twitter w-6 h-6"></i>
                     </a>
                 </div>
             </div>
         </div>
         <div class="mt-8 pt-8 border-t border-sky-600 text-center">
-            <p>&copy; <span id="current-year"></span> Casa Encanto. Todos los derechos reservados.</p>
+            <p>&copy; <span id="current-year"></span> Casa Encanto Dolores. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
@@ -283,9 +335,15 @@
 </div>
 <div id="lightbox" class="lightbox">
     <img src="" alt="Imagen ampliada">
-    <button id="prev-button" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;</button>
-    <button id="next-button" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;</button>
+    <button id="prev-button"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;
+    </button>
+    <button id="next-button"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;
+    </button>
 </div>
+<script src="js/tailwind.js"></script>
+<script src="js/lucide.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

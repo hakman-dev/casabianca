@@ -91,7 +91,7 @@ nextButton.addEventListener('click', (e) => {
 const photoContainer = document.querySelector('.photo-grid');
 
 async function loadPhotos() {
-    for (let i = 1; i <= 25; i++) {
+    for (let i = 1; i < 25; i++) {
         const imageUrl = `./images/Naamloos_HDR${i}.jpg?width=300&height=200`;
         const img = document.createElement('img');
         img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; // Placeholder
