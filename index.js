@@ -50,12 +50,12 @@ function closeLightbox() {
 
 function showPrevImage() {
     currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
-    lightboxImage.src = thumbnails[currentIndex].getAttribute('data-src');
+    lightboxImage.src = thumbnails[currentIndex].getAttribute('src');
 }
 
 function showNextImage() {
     currentIndex = (currentIndex + 1) % thumbnails.length;
-    lightboxImage.src = thumbnails[currentIndex].getAttribute('data-src');
+    lightboxImage.src = thumbnails[currentIndex].getAttribute('src');
 }
 
 thumbnails.forEach((thumbnail, index) => {
