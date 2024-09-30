@@ -23,6 +23,8 @@ h1,h2,h3 {
     max-width: 90%;
     max-height: 90%;
 }
+
+
 .lightbox-noscroll {
     display: none;
     position: fixed;
@@ -97,6 +99,24 @@ h1,h2,h3 {
     transform: scale(1.05);
 }
 
+.hover-grow-shadow {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-grow-shadow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add focus styles for accessibility */
+.hover-grow-shadow:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 /* Custom CSS for animations */
 .nav-item {
@@ -112,16 +132,6 @@ h1,h2,h3 {
 .fade-in.visible {
     opacity: 1;
 }
-/* Lightbox animation */
-.lightbox img {
-    transition: transform 0.3s;
-}
-.lightbox img:hover {
-    transform: scale(1.05);
-}
-
-
-
 
 
 .language-switcher {

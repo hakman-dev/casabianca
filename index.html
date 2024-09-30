@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="font-sans bg-sky-50 text-sky-900">
-<header class="sticky bg-white shadow-md">
+<header class="bg-white shadow-md">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h2 class="text-2xl font-bold text-sky-700">Casa Encanto Dolores</h2>
+        <h2 class="text-2xl font-bold text-sky-700"><a href="/">Casa Encanto Dolores</a></h2>
         <div class="flex items-center">
             <button id="menu-toggle" class="md:hidden mr-4">
                 <i class="fas fa-bars"></i>
@@ -136,7 +136,9 @@
                     </ul>
                     <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Voorzieningen</h3>
                     <ul class="grid grid-cols-2 gap-4">
-                        <li class="flex items-center"><i class="fas fa-wifi w-5 h-5 mr-2 text-sky-500"></i> WiFi</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-wifi w-5 h-5 mr-2 text-sky-500"></i> WiFi
+                        </li>
                         <li class="flex items-center"><i class="fas fa-fan w-5 h-5 mr-2 text-sky-500"></i> Ventilator
                         </li>
                         <li class="flex items-center"><i class="fas fa-bed w-5 h-5 mr-2 text-sky-500"></i> 2 slaapkamers
@@ -168,7 +170,7 @@
                 </div>
                 <div class="animate-on-scroll">
                     <img src="images/Naamloos_HDR8.jpg?height=400&width=600" alt="Interieur"
-                         class="rounded-lg w-full h-auto cursor-pointer hover-grow"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow hover-grow-shadow"
                          onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
@@ -181,7 +183,7 @@
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="order-2 md:order-1">
                     <img src="images/Naamloos_HDR20.jpg?height=400&width=600" alt="Zwembad"
-                         class="rounded-lg w-full h-auto cursor-pointer hover-grow"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow hover-grow-shadow"
                          onclick="openLightboxNoScroll(this.src)">
                 </div>
                 <div class="order-1 md:order-2">
@@ -205,47 +207,100 @@
         <div class="container mx-auto px-4 animate-on-scroll">
             <h2 class="text-4xl font-bold mb-8 text-center text-sky-700">De Omgeving</h2>
             <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 text-sky-600">In de buurt</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-tree w-5 h-5 mr-2 text-sky-500"></i>
-                            Natuurpark El Fondo op 9,5 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-leaf w-5 h-5 mr-2 text-sky-500"></i>
-                            Palmentuin: El Palmeral op 20 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i>
-                            Stranden van La Marina op 11 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-paw w-5 h-5 mr-2 text-sky-500"></i>
-                            Dierentuin Rio Safari Elche op 21 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i>
-                            Stranden van Santa Pola op 22 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
-                            Winkelcentrum L'Aljub Elche op 20 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
-                            Winkelcentrum La Zenia Boulevard op 32 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-store w-5 h-5 mr-2 text-sky-500"></i>
-                            Zaterdag markt in La Marina
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
-                            Aquapark Rojales op 12 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
-                            Aquopolis Torrevieja op 26 km
-                        </li>
-                        <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
-                            Aquapark Flamingo op 20 km
-                        </li>
-                    </ul>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Transport</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-plane w-5 h-5 mr-2 text-sky-500"></i> 30 min
+                                van Alicante luchthaven
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Gezondheidszorg</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center"><i class="fas fa-hospital w-5 h-5 mr-2 text-sky-500"></i>
+                                Ziekenhuis op 20 min
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Markten</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center"><i
+                                    class="fas fa-shopping-basket w-5 h-5 mr-2 text-sky-500"></i> Vrijdagochtend markt
+                                in Dolores
+                            </li>
+
+                            <li class="flex items-center">
+                                <i class="fas fa-store w-5 h-5 mr-2 text-sky-500"></i>
+                                Zaterdag markt in La Marina
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Natuur en Parken</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center"><i class="fas fa-tree w-5 h-5 mr-2 text-sky-500"></i>
+                                Natuurpark El Fondo op 9,5 km
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-leaf w-5 h-5 mr-2 text-sky-500"></i>
+                                Palmentuin: El Palmeral op 20 km
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Stranden</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center"><i
+                                    class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> Stranden van La Marina
+                                op 11 km
+                            </li>
+                            <li class="flex items-center"><i
+                                    class="fas fa-umbrella-beach w-5 h-5 mr-2 text-sky-500"></i> Stranden van Santa Pola
+                                op 22 km
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Attracties</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center"><i class="fas fa-paw w-5 h-5 mr-2 text-sky-500"></i>
+                                Dierentuin Rio Safari Elche op 21 km
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
+                                Aquapark Rojales op 12 km
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
+                                Aquopolis Torrevieja op 26 km
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-water w-5 h-5 mr-2 text-sky-500"></i>
+                                Aquapark Flamingo op 20 km
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mt-6 mb-4 text-sky-600">Winkelen</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
+                                Winkelcentrum L'Aljub Elche op 20 km
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-shopping-cart w-5 h-5 mr-2 text-sky-500"></i>
+                                Winkelcentrum La Zenia Boulevard op 32 km
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div>
                     <img src="images/Naamloos_HDR17.jpg?height=400&width=600" alt="Omgeving"
-                         class="rounded-lg w-full h-auto cursor-pointer hover-grow"
+                         class="rounded-lg w-full h-auto cursor-pointer hover-grow hover-grow-shadow"
                          onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
@@ -258,76 +313,77 @@
             <div class="photo-grid">
                 <img src="./images/Naamloos_HDR1.jpg"
                      data-src="./images/Naamloos_HDR1.jpg" alt="Casa Encanto foto 1"
-                     class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
-                    src="./images/Naamloos_HDR2.jpg"
-                    data-src="./images/Naamloos_HDR2.jpg" alt="Casa Encanto foto 2"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                     class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow">
+                    <img src="./images/Naamloos_HDR2.jpg"
+                     data-src="./images/Naamloos_HDR2.jpg" alt="Casa Encanto foto 2"
+                     class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR3.jpg"
                     data-src="./images/Naamloos_HDR3.jpg" alt="Casa Encanto foto 3"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR4.jpg"
                     data-src="./images/Naamloos_HDR4.jpg" alt="Casa Encanto foto 4"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR5.jpg"
                     data-src="./images/Naamloos_HDR5.jpg" alt="Casa Encanto foto 5"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR6.jpg"
                     data-src="./images/Naamloos_HDR6.jpg" alt="Casa Encanto foto 6"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR7.jpg"
                     data-src="./images/Naamloos_HDR7.jpg" alt="Casa Encanto foto 7"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR8.jpg"
                     data-src="./images/Naamloos_HDR8.jpg" alt="Casa Encanto foto 8"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR9.jpg"
                     data-src="./images/Naamloos_HDR9.jpg" alt="Casa Encanto foto 9"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR10.jpg"
                     data-src="./images/Naamloos_HDR10.jpg" alt="Casa Encanto foto 10"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR11.jpg"
                     data-src="./images/Naamloos_HDR11.jpg" alt="Casa Encanto foto 11"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR12.jpg"
                     data-src="./images/Naamloos_HDR12.jpg" alt="Casa Encanto foto 12"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR13.jpg"
                     data-src="./images/Naamloos_HDR13.jpg" alt="Casa Encanto foto 13"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR14.jpg"
                     data-src="./images/Naamloos_HDR14.jpg" alt="Casa Encanto foto 14"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR15.jpg"
                     data-src="./images/Naamloos_HDR15.jpg" alt="Casa Encanto foto 15"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR16.jpg"
                     data-src="./images/Naamloos_HDR16.jpg" alt="Casa Encanto foto 16"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR17.jpg"
                     data-src="./images/Naamloos_HDR17.jpg" alt="Casa Encanto foto 17"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR18.jpg"
                     data-src="./images/Naamloos_HDR18.jpg" alt="Casa Encanto foto 18"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR19.jpg"
                     data-src="./images/Naamloos_HDR19.jpg" alt="Casa Encanto foto 19"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR20.jpg"
                     data-src="./images/Naamloos_HDR20.jpg" alt="Casa Encanto foto 20"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR21.jpg"
                     data-src="./images/Naamloos_HDR21.jpg" alt="Casa Encanto foto 21"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR22.jpg"
                     data-src="./images/Naamloos_HDR22.jpg" alt="Casa Encanto foto 22"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR23.jpg"
                     data-src="./images/Naamloos_HDR23.jpg" alt="Casa Encanto foto 23"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"><img
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow"><img
                     src="./images/Naamloos_HDR24.jpg"
                     data-src="./images/Naamloos_HDR24.jpg" alt="Casa Encanto foto 24"
-                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy"></div>
+                    class="w-full h-full object-cover rounded-lg cursor-pointer lazy thumbnail hover-grow">
+            </div>
         </div>
     </section>
 
@@ -448,12 +504,15 @@
     <img src="" alt="Enlarged image">
 </div>
 <div id="lightbox" class="lightbox">
-    <img src="" alt="Enlarged image">
+    <img src="" alt="Enlarged image" id="lightboxImage">
     <button id="prev-button"
-            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&lt;
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fa fa-caret-left"></i>
+
     </button>
     <button id="next-button"
-            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full">&gt;
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-10 h-10 rounded-full flex items-center justify-center font-bold">
+        <i class="fa fa-caret-right"></i>
     </button>
 </div>
 <script src="js/tailwind.js"></script>
