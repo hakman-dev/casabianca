@@ -107,9 +107,52 @@ function animateOnScroll() {
 }
 
 
+
+
+
+
+
+function resizeGridItem(item) {
+    const grid = document.querySelector(".photo-grid");
+    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('gap'));
+    const rowSpan = Math.ceil((item.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+    item.style.gridRowEnd = "span " + rowSpan;
+}
+
+function resizeAllGridItems() {
+    const allItems = document.querySelectorAll(".photo-grid img");
+    allItems.forEach(item => {
+        resizeGridItem(item);
+    });
+}
+
+function handleImageLoad(img) {
+    resizeGridItem(img);
+}
+
+// Initial setup
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.photo-grid img');
+    images.forEach(img => {
+        if (img.complete) {
+            handleImageLoad(img);
+        } else {
+            img.addEventListener('load', () => handleImageLoad(img));
+        }
+    });
+});
+
+// Handle window resize
+window.addEventListener("resize", resizeAllGridItems);
+
+
 // Call functions when the page loads
 window.onload = async function() {
     animateOnScroll();
 };
+
+
+
 
 
