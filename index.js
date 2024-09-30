@@ -16,10 +16,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Responsive menu toggle
 const menuToggle = document.getElementById('menu-toggle');
+
 const menu = document.getElementById('menu');
+const menuItems  = menu.querySelectorAll('.navbar-item')
 
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('hidden');
+});
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
 });
 
 // Lightbox functionality

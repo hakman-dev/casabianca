@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="font-sans bg-sky-50 text-sky-900">
-<header class="bg-white shadow-md">
+<header class="sticky bg-white shadow-md">
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
         <h2 class="text-2xl font-bold text-sky-700"><a href="/">Casa Encanto Dolores</a></h2>
         <div class="flex items-center">
@@ -17,14 +17,14 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul id="menu"
-                class="hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
-                <li><a href="#home" class="block py-2 md:py-0 hover:text-sky-500">Home</a></li>
-                <li><a href="#over" class="block py-2 md:py-0 hover:text-sky-500">Over</a></li>
-                <li><a href="#zwembad" class="block py-2 md:py-0 hover:text-sky-500">Zwembad</a></li>
-                <li><a href="#omgeving" class="block py-2 md:py-0 hover:text-sky-500">Omgeving</a></li>
-                <li><a href="#fotos" class="block py-2 md:py-0 hover:text-sky-500">Foto's</a></li>
-                <li><a href="#prijzen" class="block py-2 md:py-0 hover:text-sky-500">Prijzen</a></li>
-                <li><a href="#contact" class="block py-2 md:py-0 hover:text-sky-500">Contact</a></li>
+                class="p-2 hidden md:flex md:space-x-6 md:ml-auto absolute md:static left-0 right-0 top-16 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row items-center py-4 md:py-0">
+                <li><a href="#home" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Home</a></li>
+                <li><a href="#over" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Over</a></li>
+                <li><a href="#zwembad" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Zwembad</a></li>
+                <li><a href="#omgeving" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Omgeving</a></li>
+                <li><a href="#fotos" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Foto's</a></li>
+                <li><a href="#prijzen" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Prijzen</a></li>
+                <li><a href="#contact" class="navbar-item block py-2 md:py-0 hover:text-sky-500">Contact</a></li>
             </ul>
             <div class="language-switcher ml-4">
                 <button aria-label="Taal selecteren">
@@ -449,10 +449,7 @@
                     </a>
                 </div>
                 <div class="flex items-center justify-center h-full">
-                    <div id="contact-map" class="w-full h-full rounded-lg overflow-hidden">
-                        <img src="images/dolores-espana-map.png" alt="Map Image" class="object-cover" loading="lazy"
-                             style="max-height: 300px">
-                    </div>
+                        <img src="images/dolores-espana-map.png" alt="dolores landkaart" loading="lazy" class="rounded-lg w-full h-auto cursor-pointer hover-grow hover-grow-shadow" onclick="openLightboxNoScroll(this.src)">
                 </div>
             </div>
         </div>
