@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Encanto Dolores | Prachtig Gastenverblijf in Dolores, Alicante</title>
+    <title>Casa Encanto Dolores | Gastenverblijf in Dolores, Alicante</title>
     <meta name="description"
           content="Casa Encanto Dolores: Een prachtig gastenverblijf in Dolores, Alicante. Geniet van ons zwembad, rustige omgeving, en nabijheid van stranden. Ideaal voor gezinnen en koppels.">
     <meta name="keywords"
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Casa Encanto Dolores - Uw perfecte vakantieverblijf in Spanje">
     <meta property="og:description"
           content="Een prachtig gastenverblijf in een rustige omgeving in Dolores, Alicante. Ontdek onze voorzieningen en de prachtige omgeving.">
-    <meta property="og:image" content="https://casaencantodolores.es/images/Naamloos_HDR18.jpg">
+    <meta property="og:image" content="https://casaencantodolores.es/images/image00001.jpeg">
     <meta property="og:url" content="https://casaencantodolores.es/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nl_NL">
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Casa Encanto Dolores - Uw perfecte vakantieverblijf in Spanje">
     <meta name="twitter:description"
           content="Een prachtig gastenverblijf in een rustige omgeving in Dolores, Alicante. Ontdek onze voorzieningen en de prachtige omgeving.">
-    <meta name="twitter:image" content="https://casaencantodolores.es/images/Naamloos_HDR18.jpg">
+    <meta name="twitter:image" content="https://casaencantodolores.es/images/image00001.jpeg">
     <meta name="twitter:site" content="@CasaEncantoDolores">
 
     <meta name="geo.region" content="ES-A">
@@ -51,7 +51,7 @@
             "@type": "LodgingBusiness",
             "name": "Casa Encanto Dolores",
             "description": "Een prachtig gastenverblijf in een rustige omgeving in Dolores, Alicante, Spanje. Geniet van onze voorzieningen zoals zwembad, kindvriendelijke faciliteiten en de nabijheid van stranden en attracties.",
-            "image": "https://casaencantodolores.es/images/Naamloos_HDR18.jpg",
+            "image": "https://casaencantodolores.es/images/image00001.jpeg",
             "url": "https://casaencantodolores.es/",
             "telephone": "+34 688 703 862",
             "email": "info@CasaEncantoDolores.es",
@@ -103,6 +103,8 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <script src="js/tailwind.js"></script>
+
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -176,9 +178,18 @@
 </header>
 
 <main>
-    <section id="home" class="relative h-screen">
-        <img src="images/Naamloos_HDR18.jpg" alt="Casa Encanto Dolores"
-             class="absolute inset-0 w-full h-full object-cover">
+    <section id="home" class="relative h-screen overflow-hidden">
+        <video
+                class="absolute inset-0 w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="images/image00001.jpeg"
+        >
+            <source src="/images/header.mp4" type="video/mp4">
+            Uw browser ondersteunt het video-element niet.
+        </video>
         <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white p-2">
             <h1 class="text-5xl font-bold mb-4">Welkom bij Casa Encanto Dolores</h1>
             <p class="text-2xl">Een prachtig gastenverblijf in een rustige omgeving</p>
@@ -426,7 +437,7 @@
                 <img src="./images/Naamloos_HDR15.jpg" alt="Casa Encanto foto 15" class="thumbnail" loading="lazy">
                 <img src="./images/Naamloos_HDR16.jpg" alt="Casa Encanto foto 16" class="thumbnail" loading="lazy">
                 <img src="./images/Naamloos_HDR17.jpg" alt="Casa Encanto foto 17" class="thumbnail" loading="lazy">
-                <img src="./images/Naamloos_HDR18.jpg" alt="Casa Encanto foto 18" class="thumbnail" loading="lazy">
+                <img src="./images/image00001.jpeg" alt="Casa Encanto foto 18" class="thumbnail" loading="lazy">
                 <img src="./images/Naamloos_HDR19.jpg" alt="Casa Encanto foto 19" class="thumbnail" loading="lazy">
                 <img src="./images/Naamloos_HDR20.jpg" alt="Casa Encanto foto 20" class="thumbnail" loading="lazy">
                 <img src="./images/Naamloos_HDR21.jpg" alt="Casa Encanto foto 21" class="thumbnail" loading="lazy">
@@ -480,11 +491,11 @@
                     <ul class="space-y-4">
                         <li class="flex items-center">
                             <i class="fas fa-phone w-5 h-5 mr-2 text-sky-700"></i>
-                            <span>+34 688 703 862 (Bianca)</span>
+                            <a href="tel:+34688703862">+34 688 703 862 (Bianca)</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope w-5 h-5 mr-2 text-sky-700"></i>
-                            <span>info@CasaEncantoDolores.es</span>
+                            <a href="mailto:info@casaencantodolores.es">info@CasaEncantoDolores.es</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt w-5 h-5 mr-2 text-sky-700"></i>
@@ -564,7 +575,6 @@
         <i class="fa fa-caret-right"></i>
     </button>
 </div>
-<script src="js/tailwind.js"></script>
 <script src="js/lucide.min.js"></script>
 <script src="index.js"></script>
 </body>
